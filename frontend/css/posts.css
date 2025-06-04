@@ -1,0 +1,65 @@
+.post {
+  max-width: 450px;
+  margin: 1.5rem auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: 0 32px 32px -16px #eee;
+}
+
+.post-single {
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+.post-head {
+  margin-bottom: 0.5rem;
+}
+
+.post-head small {
+  color: #bbb;
+}
+
+.posts {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.post-content {
+  margin-bottom: 1rem;
+}
+
+.engagements button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.engagements {
+  margin-bottom: 1rem;
+}
+
+.engagements-group {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.view-posts a {
+  text-decoration: none;
+  color: #ac00ac;
+}
+
+.post-button button {
+  padding: 8px;
+  border-radius: 4px;
+  background-color: magenta;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+

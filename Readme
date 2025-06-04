@@ -1,0 +1,65 @@
+# 📱 Social Media App
+
+A basic social media web app built with PHP and MySQL. This app runs locally using PHP’s built-in development server and connects to a MySQL database. Ideal for learning or prototyping.
+
+---
+
+## 🔧 Tech Stack
+
+- **Backend:** PHP (No framework)
+- **Database:** MySQL
+- **Frontend:** HTML/CSS/JavaScript
+- **Server:** PHP built-in server on **port 8080**
+
+---
+
+## 🚀 Features
+
+- User registration and login
+- Post creation and listing
+- Like and comment functionality
+- Basic user profile page
+
+---
+
+## 📦 Setup Instructions
+
+### 1. ✅ Prerequisites
+
+- PHP (≥ 7.4)
+- MySQL (running locally)
+- Git 
+
+---
+
+### 2. 📁 Clone the Project
+
+```bash
+git clone https://github.com/selfdotname/_projects/tree/main/social10
+cd social10 
+
+📁 Project Structure
+social10/
+├── config/         # Database connection
+├── database/       # SQL scripts
+├── auth/           # Login, register logic
+├── posts/          # Post handling
+├── public/         # Assets (CSS/JS)
+├── templates/      # HTML partials
+├── index.php       # Main entry
+└── ...
+
+Create two directories namely, frontend,backend.
+move the frontend files to the frontend directory and backend files to the backend directory.
+create a file named Dockerfile.php in the frontend directory as shown in the repo and a file named Dockerfile.backend in the backend directory. Create .env files for the mysql containers. place the .env file into gitignore.
+
+run docker compose up -d
+    docker compose up --build
+
+live deployment:
+
+▶️ Run the PHP Server
+
+
+
+http://localhost:8080

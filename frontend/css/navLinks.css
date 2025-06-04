@@ -1,0 +1,26 @@
+.nav-links nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: initial;
+  padding: 8px;
+  border-radius: 3px;
+}
+.nav-links {
+  margin-bottom: 3rem;
+}
+.nav-links--single {
+  margin-bottom: 0;
+}
+.nav-links--posts-page {
+  margin-bottom: .5rem;
+}
+/* utility */
+.active-link {
+  background-color: magenta !important;
+  color: #fff !important;
+}

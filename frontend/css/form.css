@@ -1,0 +1,90 @@
+.input-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field label {
+  margin-bottom: 0.5rem;
+}
+
+.input-field input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #aaa;
+}
+
+.input-field input::placeholder {
+  font-size: 1rem;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.signup-form {
+  max-width: 450px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: 0 45px 32px -16px #eee;
+  background-color: #fff;
+}
+
+.signup-form button {
+  width: 100%;
+  padding: 12px 0;
+  background-color: magenta;
+  color: #fff;
+  cursor: pointer;
+}
+
+.warning em {
+  color: red;
+  font-size: 1rem;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.warning {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.comment-form form {
+  display: flex;
+  gap: 1rem;
+}
+
+.comment-form input {
+  flex-grow: 1;
+  border: 1px solid #aaa;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.comment-form input:focus {
+  border: 2px solid magenta;
+}
+
+.comment-form button {
+  padding: 0 8px;
+  cursor: pointer;
+  background-color: magenta;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.delete-post-form-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-post-form button {
+  background-color: transparent;
+  cursor: pointer;
+}
