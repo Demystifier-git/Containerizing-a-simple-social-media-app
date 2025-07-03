@@ -8,9 +8,9 @@
         </testsuite>
     </testsuites>
 
-    <coverage>
-        <include>
-            <directory>src</directory>
-        </include>
-    </coverage>
+    <coverage processUncoveredFiles="true">
+    <include>
+        <directory>.</directory> <!-- or use specific folders like "includes/" -->
+    </include>
+</coverage>
 </phpunit>
