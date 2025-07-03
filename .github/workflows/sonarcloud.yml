@@ -28,6 +28,7 @@ jobs:
       - name: Run PHPUnit with coverage
         run: |
           vendor/bin/phpunit --coverage-clover=coverage.xml
+        working-directory: ./frontend   
 
       - name: Set up JDK for SonarScanner
         uses: actions/setup-java@v3
