@@ -21,9 +21,12 @@ jobs:
           php-version: '8.2'
           extensions: xdebug
 
-      - name: Install dependencies (Composer)
-        run: |
-          composer install --prefer-dist --no-progress
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress
+        working-directory: ./frontend
+
+      - name: Run PHPUnit with coverage
+        run: ./vendor/bin/phpunit --coverage-clover=coverage.xml
         working-directory: ./frontend    
 
       - name: Set up JDK for SonarScanner
