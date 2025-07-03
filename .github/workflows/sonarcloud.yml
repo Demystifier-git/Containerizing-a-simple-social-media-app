@@ -1,0 +1,55 @@
+name: SonarCloud PHP Analysis
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  sonarqube:
+    name: Analyze PHP Code with SonarCloud
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: xdebug
+
+      - name: Install dependencies (Composer)
+        run: |
+          composer install --prefer-dist --no-progress --no-suggest
+
+      - name: Run PHPUnit with coverage
+        run: |
+          vendor/bin/phpunit --coverage-clover=coverage.xml
+
+      - name: Set up JDK for SonarScanner
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Cache SonarCloud packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+
+      - name: Run SonarCloud analysis
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          sonar-scanner \
+            -Dsonar.projectKey=Demystifier-git_Containerizing-a-simple-social-media-app \
+            -Dsonar.organization=demystifier-git \
+            -Dsonar.host.url=https://sonarcloud.io \
+            -Dsonar.login=${SONAR_TOKEN} \
+            -Dsonar.php.coverage.reportPaths=coverage.xml
+
