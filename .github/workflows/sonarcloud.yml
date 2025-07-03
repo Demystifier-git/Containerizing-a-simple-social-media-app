@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies (Composer)
         run: |
-          composer install --prefer-dist --no-progress --no-suggest
+          composer install --prefer-dist --no-progress
 
       - name: Run PHPUnit with coverage
         run: |
