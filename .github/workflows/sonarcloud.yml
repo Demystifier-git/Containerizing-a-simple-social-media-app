@@ -24,6 +24,7 @@ jobs:
       - name: Install dependencies (Composer)
         run: |
           composer install --prefer-dist --no-progress
+        working-directory: ./frontend  
 
       - name: Run PHPUnit with coverage
         run: |
