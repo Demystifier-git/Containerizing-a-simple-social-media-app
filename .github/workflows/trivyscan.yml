@@ -28,6 +28,8 @@ jobs:
           image-ref: demystifier803/social12-php:latest
           format: json
           output: ./trivy-report.json  # Explicit file in workspace
+          severity: CRITICAL,HIGH
+          exit-code: 1
           
       - name: Upload Trivy Report
         uses: actions/upload-artifact@v4
