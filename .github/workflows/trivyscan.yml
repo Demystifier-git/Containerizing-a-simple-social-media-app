@@ -24,7 +24,7 @@ jobs:
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
         with:
-          context: ./frontend  # or ./ if Dockerfile is in root
+          context: ./frontend/Dockerfile.php  # or ./ if Dockerfile is in root
           push: true
           tags: demystifier803/social12-php:latest
 
