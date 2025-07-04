@@ -28,4 +28,10 @@ jobs:
           image-ref: demystifier803/social12-php:latest
           format: table
           severity: CRITICAL,HIGH
+          
+      - name: Upload Trivy Report
+        uses: actions/upload-artifact@v4
+        with:
+         name: trivy-scan-report
+         path: trivy-report.json   
 
