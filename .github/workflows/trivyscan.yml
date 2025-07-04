@@ -26,8 +26,8 @@ jobs:
         with:
           scan-type: image
           image-ref: demystifier803/social12-php:latest
-          format: table
-          severity: CRITICAL,HIGH
+          format: json
+          output: ./trivy-report.json  # Explicit file in workspace
           
       - name: Upload Trivy Report
         uses: actions/upload-artifact@v4
