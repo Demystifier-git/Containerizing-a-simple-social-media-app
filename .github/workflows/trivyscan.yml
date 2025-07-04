@@ -21,13 +21,6 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build and Push Docker Image
-        uses: docker/build-push-action@v5
-        with:
-          context: ./frontend/Dockerfile.php  # or ./ if Dockerfile is in root
-          push: true
-          tags: demystifier803/social12-php:latest
-
       - name: Scan Docker image with Trivy
         uses: aquasecurity/trivy-action@master
         with:
