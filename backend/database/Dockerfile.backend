@@ -1,4 +1,4 @@
 FROM mysql:8.0
 
 # Copy initialization SQL script
-COPY ./db.sql /docker-entrypoint-initdb.d/
+COPY db.sql /docker-entrypoint-initdb.d/
