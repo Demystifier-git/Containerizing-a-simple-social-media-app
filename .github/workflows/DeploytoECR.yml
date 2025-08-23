@@ -23,13 +23,12 @@ jobs:
         run: |
           aws ecr get-login-password --region us-east-1 | \
           docker login --username AWS --password-stdin 920216467853.dkr.ecr.us-east-1.amazonaws.com
-
-      - name: Build and Push Backend Image
-        run: |
+            - name: Build and Push Backend Image
+             run: |
           IMAGE_TAG=${GITHUB_SHA::7}
           docker buildx build \
             -t 920216467853.dkr.ecr.us-east-1.amazonaws.com/socialmediaapp:backend-$IMAGE_TAG \
-            -f Dockerfile.backend .
+            ./backend
           docker push 920216467853.dkr.ecr.us-east-1.amazonaws.com/socialmediaapp:backend-$IMAGE_TAG
 
       - name: Build and Push Frontend Image
@@ -37,7 +36,8 @@ jobs:
           IMAGE_TAG=${GITHUB_SHA::7}
           docker buildx build \
             -t 920216467853.dkr.ecr.us-east-1.amazonaws.com/socialmediaapp:frontend-$IMAGE_TAG \
-            -f Dockerfile.frontend .
+            ./frontend
           docker push 920216467853.dkr.ecr.us-east-1.amazonaws.com/socialmediaapp:frontend-$IMAGE_TAG
+
 
 
