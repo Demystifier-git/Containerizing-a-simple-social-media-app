@@ -48,7 +48,7 @@ function runSelectQuery($mysql, $sql, $format = null, ...$params)
  * @param string $passwd
  * @param string $db
  */
-function connectToMySQL($host = "mysql", $user = "myuser", $passwd = "myuserpassword", $db = "social10")
+function connectToMySQL($host = "mydb-instance.c69ouswgucms.us-east-1.rds.amazonaws.com", $user = "myuser", $passwd = "myuserpassword", $db = "social10")
 {
   $mysql = new mysqli($host, $user, $passwd, $db);
   if ($mysql->connect_error) exit($mysql->connect_error);
